@@ -137,7 +137,8 @@ Git Guidelines that I prefer to follow.
    - Unique set of encryption and decryption keys for each session.
    - Ensures confidentiality and integrity of data exchanged.
 
-29. **Subfolder Naming Conventions:**
-    - Follow the same conventions as for folders.
+
+# GIT SSH KEYS Setup Guide:
+   - https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 Remember to customize these guidelines based on your project's specific needs and workflows.
