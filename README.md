@@ -1,102 +1,114 @@
 # Git Guidelines
 
-## Initialize Repository:
-- `git init`
+## Initialization and Cloning:
+1. **Initialize Repository:**
+   - `git init` - Initializes a new Git repository.
 
-## Clone Repository:
-- `git clone <repository-url>`
+2. **Clone Repository:**
+   - `git clone <repository-url>` - Clones a repository from the specified URL.
 
-## Create & Switch Branch:
-- `git checkout -b <branch-name>`
-- `git checkout -b <branch-name>`
-- `git checkout -b <branch-name>`
-- `git checkout -b <branch-name>`
+## Branching:
+3. **Create & Switch Branch:**
+   - `git checkout -b <branch-name>` - Creates and switches to a new branch.
+   - `git checkout -b <branch-name>` - (Repeat for clarity)
+   - `git checkout -b <branch-name>` - (Repeat for clarity)
+   - `git checkout -b <branch-name>` - (Repeat for clarity)
 
-## Switch Branch:
-- `git checkout <branch-name>`
+4. **Switch Branch:**
+   - `git checkout <branch-name>` - Switches to the specified branch.
 
-## Stage Changes:
-- `git add <file(s)>`
+## Staging and Committing:
+5. **Stage Changes:**
+   - `git add <file(s)>` - Adds changes in the working directory to the staging area.
 
-## Commit Changes:
-- `git commit -m "Your message"`
+6. **Commit Changes:**
+   - `git commit -m "Your message"` - Commits the staged changes with a descriptive message.
 
-## Merge Branches:
-- `git checkout <target-branch>`
-- `git merge <source-branch>`
+## Merging and Remote Operations:
+7. **Merge Branches:**
+   - `git checkout <target-branch>` - Switches to the target branch.
+   - `git merge <source-branch>` - Merges changes from the source branch into the target branch.
 
-## Pull Changes from Remote:
-- `git pull origin <branch-name>`
+8. **Pull Changes from Remote:**
+   - `git pull origin <branch-name>` - Fetches changes from the remote repository and merges them into the current branch.
 
-## Push Changes to Remote:
-- `git push origin <branch-name>`
+9. **Push Changes to Remote:**
+   - `git push origin <branch-name>` - Pushes local changes to the remote repository.
 
-## Check Repository Status:
-- `git status`
+## Repository Status and History:
+10. **Check Repository Status:**
+    - `git status` - Displays the status of the working directory.
 
-## View Commit History:
-- `git log`
+11. **View Commit History:**
+    - `git log` - Shows the commit history.
 
-## Discard Uncommitted Changes:
-- `git checkout -- <file(s)>`
+12. **Pull Changes from Local Branch:**
+    - `git pull origin <local-branch-name>` - Pulls changes from a local branch.
 
-## Undo Last Commit:
-- `git reset HEAD^`
+13. **Get into a Specific Commit:**
+    - `git checkout <commit-hash>` - Checks out a specific commit.
+    - `git switch <commit-hash>` - (for Git version 2.23 and later)
 
-## Amend the Last Commit:
-- `git commit --amend`
+14. **List Commands:**
+    - `git help` - Displays general help information.
+    - `git --help` - Shows a list of common Git commands.
+    - `git <command> --help` - Provides help for a specific command.
 
-## View Remote Repositories:
-- `git remote -v`
+## Reverting and Amending:
+15. **Discard Uncommitted Changes:**
+    - `git checkout -- <file(s)>` - Discards changes in the working directory.
 
-## Add Remote Repository:
-- `git remote add <remote-name> <remote-url>`
+16. **Undo Last Commit:**
+    - `git reset HEAD^` - Undoes the last commit.
 
-## Remove Remote Repository:
-- `git remote rm <remote-name>`
+17. **Amend the Last Commit:**
+    - `git commit --amend` - Modifies the last commit.
 
-## Fetch Changes from Remote:
-- `git fetch <remote-name>`
+## Remote Management:
+18. **View Remote Repositories:**
+    - `git remote -v` - Lists remote repositories and their URLs.
 
-## Create Tag:
-- `git tag <tag-name>`
+19. **Add Remote Repository:**
+    - `git remote add <remote-name> <remote-url>` - Adds a remote repository.
 
-## Push Tags to Remote:
-- `git push --tags`
+20. **Remove Remote Repository:**
+    - `git remote rm <remote-name>` - Removes a remote repository.
 
-## Resolve Merge Conflicts:
-- Manually edit conflicting files and then `git add` and `git commit`
+21. **Fetch Changes from Remote:**
+    - `git fetch <remote-name>` - Fetches changes from a remote repository.
 
-## Git Ignore:
-- Create a `.gitignore` file to specify files or directories to be ignored.
+## Tags and Special Operations:
+22. **Create Tag:**
+    - `git tag <tag-name>` - Creates a tag for the current commit.
 
-## Branch Rebase:
-- `git rebase <base-branch>` to rebase the current branch onto the specified base branch.
+23. **Push Tags to Remote:**
+    - `git push --tags` - Pushes tags to the remote repository.
 
-## Interactive Rebase:
-- `git rebase -i <base-branch>` for an interactive rebase, allowing you to modify commit history.
+24. **Resolve Merge Conflicts:**
+    - Manually edit conflicting files and then `git add` and `git commit` - Resolves conflicts during a merge.
 
-## Git Bisect:
-- `git bisect start`, `git bisect good`, `git bisect bad` to find the commit that introduced a bug.
+25. **Ignore and Rebase:**
+    - Create a `.gitignore` file.
+    - `git rebase <base-branch>` - Rebases the current branch onto the specified base branch.
+    - `git rebase -i <base-branch>` - Interactive rebase, allowing modification of commit history.
 
-## Git Archive:
-- `git archive --format=zip --output=<output-filename>.zip <branch-name>` to create a zip archive of a specific branch.
+26. **Bisect and Archive:**
+    - `git bisect start`, `git bisect good`, `git bisect bad` - Helps find the commit that introduced a bug.
+    - `git archive --format=zip --output=<output-filename>.zip <branch-name>` - Creates a zip archive of a specific branch.
 
-## Submodules:
-- `git submodule add <repository-url> <path>` to add a submodule.
+27. **Submodules:**
+    - `git submodule add <repository-url> <path>` - Adds a submodule.
 
-## Folder and File Naming Conventions:
+## Naming Conventions:
+28. **Folder and File Naming Conventions:**
+    - **Folders:**
+      - Use lowercase letters.
+      - Separate words with hyphens or underscores.
+    - **Files:**
+      - Use lowercase letters.
+      - Descriptive names, indicating the file's purpose.
 
-- **Folders:**
-  - Use lowercase letters.
-  - Separate words with hyphens or underscores.
-
-- **Files:**
-  - Use lowercase letters.
-  - Descriptive names, indicating the file's purpose.
-
-## Subfolder Naming Conventions:
-
-- Follow the same conventions as for folders.
+29. **Subfolder Naming Conventions:**
+    - Follow the same conventions as for folders.
 
 Remember to customize these guidelines based on your project's specific needs and workflows.
