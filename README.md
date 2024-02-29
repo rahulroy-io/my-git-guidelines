@@ -138,7 +138,7 @@ Git Guidelines that I prefer to follow.
    - Ensures confidentiality and integrity of data exchanged.
 
 
-# GIT SSH KEYS Setup Guide:
+## GIT SSH Keys Setup Guide:
    - https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 Remember to customize these guidelines based on your project's specific needs and workflows.
