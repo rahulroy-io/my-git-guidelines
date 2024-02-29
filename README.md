@@ -1,4 +1,4 @@
-# My Git Guidelines
+# my-git-guidelines
 Git Guidelines that I prefer to follow.
 
 ## Initialization and Cloning:
