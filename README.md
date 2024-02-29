@@ -14,6 +14,8 @@ Git Guidelines that I prefer to follow.
    - `git checkout <branch-name>` - Switches to the specified branch.
    - `git branch -d <branch-name>` - Deletes the specified branch.
    - `git branch -m <new-branch-name>` - Renames the current branch.
+   - `git branch` - shows all local branches.
+   - `git branch -a` - shows all local and remote branches. 
 
    Renaming a branch is easy! Just use `git branch -m <new-branch-name>` to give your branch a new name.
 
@@ -112,6 +114,25 @@ Git Guidelines that I prefer to follow.
     - **Files:**
       - Use lowercase letters.
       - Descriptive names, indicating the file's purpose.
+     
+## SSH Key Pair:
+   - **Public Key:**
+      - Shared openly, used for encryption and verification.
+      - Placed on servers or platforms like GitHub for authentication. Whoever holds the private key is authenticated. Based on the identification accesses are allowed or restricted.
+      - Does not compromise security if exposed.
+   - **Private Key:**
+      - Kept confidential, used for decryption and signing.
+      - Possession proves identity during authentication.
+      - Never shared or exposed to maintain security.
+
+## Authentication:
+   - Process of proving your identity using the private key.
+   - Successful authentication grants access based on authorization.
+
+## Secure Channel:
+   - Established after authentication, encrypting all subsequent communication.
+   - Unique set of encryption and decryption keys for each session.
+   - Ensures confidentiality and integrity of data exchanged.
 
 29. **Subfolder Naming Conventions:**
     - Follow the same conventions as for folders.
