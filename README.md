@@ -9,20 +9,24 @@
 
 ## Branching:
 3. **Create & Switch Branch:**
-   - `git checkout -b <branch-name>` - Creates and switches to a new branch.
-   - `git checkout -b <branch-name>` - (Repeat for clarity)
-   - `git checkout -b <branch-name>` - (Repeat for clarity)
-   - `git checkout -b <branch-name>` - (Repeat for clarity)
+   - `git branch <branch-name>` - Creates a new branch.
+   - `git checkout <branch-name>` - Switches to the specified branch.
+   - `git branch -d <branch-name>` - Deletes the specified branch.
+   - `git branch -m <new-branch-name>` - Renames the current branch.
+
+   Renaming a branch is easy! Just use `git branch -m <new-branch-name>` to give your branch a new name.
 
 4. **Switch Branch:**
    - `git checkout <branch-name>` - Switches to the specified branch.
 
 ## Staging and Committing:
 5. **Stage Changes:**
-   - `git add <file(s)>` - Adds changes in the working directory to the staging area.
+   - `git add <file(s)>` - Adds specific files to the staging area.
+   - `git add .` - Adds all changes in the working directory to the staging area.
+   - `git add -A` - (Alternative for adding all changes)
 
 6. **Commit Changes:**
-   - `git commit -m "Your message"` - Commits the staged changes with a descriptive message.
+   - `git commit -m "Your message"` - Commits the staged changes with a descriptive message. Remember, friendly commit messages make collaboration more enjoyable!
 
 ## Merging and Remote Operations:
 7. **Merge Branches:**
