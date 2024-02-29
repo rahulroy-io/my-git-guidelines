@@ -1,4 +1,4 @@
-# Git Guidelines
+# My Git Guidelines
 
 ## Initialization and Cloning:
 1. **Initialize Repository:**
