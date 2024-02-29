@@ -110,7 +110,10 @@ Git Guidelines that I prefer to follow.
 28. **Folder and File Naming Conventions:**
     - **Folders:**
       - Use lowercase letters.
-      - Separate words with hyphens or underscores.
+      - Separate words with hyphens for folders.
+      - Follow the same conventions as for subfolders as like folders.
+      - Follow underscore separated for file names.
+      - Follow underscore separated for cloud services.
     - **Files:**
       - Use lowercase letters.
       - Descriptive names, indicating the file's purpose.
