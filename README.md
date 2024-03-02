@@ -142,8 +142,6 @@ Git Guidelines that I prefer to follow.
 
 Remember to customize these guidelines based on your project's specific needs and workflows.
 
-# Git Summary
-
 ## Version Control Purpose
 
 - Git serves as a robust version control system, tracking changes in files.
@@ -159,10 +157,6 @@ Remember to customize these guidelines based on your project's specific needs an
 - Text files: Commits capture delta changes efficiently.
 - Binary files: Git replicates entire files for changes, ensuring comprehensive tracking.
 
-## Squashing Commits
-
-- Squashing combines multiple commits into a single squash commit for clearer commit history.
-
 ## Difference Between "Pull" and "Merge"
 
 - "Pull" fetches and merges changes from the remote repository into the local branch.
@@ -171,11 +165,12 @@ Remember to customize these guidelines based on your project's specific needs an
 
 - Merging copies changes from one branch (or commit) into another, facilitating project cohesion.
 
-## Fetch, Pull, and Push Distinction
+## Fetch, Pull, Merge and Push Distinction
 
 - `git fetch` brings remote changes to the local repository without creating commits.
 - `git pull` fetches and merges changes automatically.
 - `git push` shares local commits with the remote repository.
+- `merge` happens automatically if there is no conflict. Conflict need to be resolved manually.
 
 ## Conflict Resolution
 
