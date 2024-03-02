@@ -10,14 +10,13 @@ Git Guidelines that I prefer to follow.
 
 ## Branching:
 3. **Create & Switch Branch:**
+   - `git checkout -b <branch-name>` - Creates a new branch and switch to it.
    - `git branch <branch-name>` - Creates a new branch.
    - `git checkout <branch-name>` - Switches to the specified branch.
    - `git branch -d <branch-name>` - Deletes the specified branch.
    - `git branch -m <new-branch-name>` - Renames the current branch.
    - `git branch` - shows all local branches.
-   - `git branch -a` - shows all local and remote branches. 
-
-   Renaming a branch is easy! Just use `git branch -m <new-branch-name>` to give your branch a new name.
+   - `git branch -a` - shows all local, remote head pointing to which remote branch remote branches and orgin over here is an alias of repo url `git remote -v`
 
 4. **Switch Branch:**
    - `git checkout <branch-name>` - Switches to the specified branch.
