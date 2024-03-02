@@ -141,3 +141,55 @@ Git Guidelines that I prefer to follow.
    - https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 Remember to customize these guidelines based on your project's specific needs and workflows.
+
+# Git Summary
+
+## Version Control Purpose
+
+- Git serves as a robust version control system, tracking changes in files.
+- Commits document changes, aiding in understanding modifications over time.
+
+## Git Workflow
+
+- Main and feature branches structure development.
+- Clone, create local branches, push changes, create pull requests, and merge for a streamlined workflow.
+
+## Commit Handling
+
+- Text files: Commits capture delta changes efficiently.
+- Binary files: Git replicates entire files for changes, ensuring comprehensive tracking.
+
+## Squashing Commits
+
+- Squashing combines multiple commits into a single squash commit for clearer commit history.
+
+## Difference Between "Pull" and "Merge"
+
+- "Pull" fetches and merges changes from the remote repository into the local branch.
+
+## Merge Concept
+
+- Merging copies changes from one branch (or commit) into another, facilitating project cohesion.
+
+## Fetch, Pull, and Push Distinction
+
+- `git fetch` brings remote changes to the local repository without creating commits.
+- `git pull` fetches and merges changes automatically.
+- `git push` shares local commits with the remote repository.
+
+## Conflict Resolution
+
+- Pulling when local commits are ahead may result in conflicts.
+- Resolve conflicts manually, leading to a new commit reflecting merged changes.
+
+## Commands
+
+- **Clone:** `git clone [repository URL]`
+- **Create Branch:** `git branch [branch name]`
+- **Push Changes:** `git push origin [branch name]`
+- **Create Pull Request:** Initiate on your Git hosting platform
+- **Merge:** Post approval, merge the pull request
+- **Fetch:** `git fetch`
+- **Pull:** `git pull`
+- **Push:** `git push`
+
