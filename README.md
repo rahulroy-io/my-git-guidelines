@@ -111,10 +111,10 @@ Git Guidelines that I prefer to follow.
       - Use lowercase letters.
       - Separate words with hyphens for folders.
       - Follow the same conventions as for subfolders as like folders.
-      - Follow underscore separated for file names.
-      - Follow underscore separated for cloud services.
     - **Files:**
       - Use lowercase letters.
+      - Follow underscore separated for file names.
+      - Follow underscore separated for cloud services as well (my preference - since underline service file whould have same name like service name to avoid confusion).
       - Descriptive names, indicating the file's purpose.
       - Exception -> README.md in parent directory, although in sub-directories it should follow lower case as readme.md like any oher files
      
