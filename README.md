@@ -116,6 +116,7 @@ Git Guidelines that I prefer to follow.
     - **Files:**
       - Use lowercase letters.
       - Descriptive names, indicating the file's purpose.
+      - Exception -> README.md in parent directory, although in sub-directories it should follow lower case as readme.md like any oher files
      
 ## SSH Key Pair:
    - **Public Key:**
