@@ -140,6 +140,11 @@ Git Guidelines that I prefer to follow.
 
 ## GIT SSH Keys Setup Guide:
    - https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+   - `ssh-keygen -t ed25519 -C "mail-id-optional"`
+   - copy and add the public key(id_ed25519.pub) content in github ```bash
+     some code
+     ```
+   - `git archive --format=zip --output=<output-filename>.zip <branch-name>` - Creates a zip archive of a specific branch.
 
 Remember to customize these guidelines based on your project's specific needs and workflows.
 
