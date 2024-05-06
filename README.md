@@ -141,9 +141,17 @@ Git Guidelines that I prefer to follow.
 ## GIT SSH Keys Setup Guide:
    - https://docs.github.com/en/authentication/connecting-to-github-with-ssh
    - `ssh-keygen -t ed25519 -C "mail-id-optional"`
-   - copy and add the public key(id_ed25519.pub) content in github ```bash
-     some code
-     ```
+   - copy and add the public key(id_ed25519.pub) content in github
+   - create config ```bash touch cd /home/ubuntu/.ssh/config```
+   - Contents in config:
+     ```bash
+     # GitHub Configuration
+     Host github.com
+        HostName github.com
+        User git
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/id_ed25519
+   - add ssh origin for error `git remote set-url origin <SSH_URL>`
    - `git archive --format=zip --output=<output-filename>.zip <branch-name>` - Creates a zip archive of a specific branch.
 
 Remember to customize these guidelines based on your project's specific needs and workflows.
