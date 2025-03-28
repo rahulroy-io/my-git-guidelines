@@ -94,7 +94,7 @@ Git Guidelines that I prefer to follow.
     - Manually edit conflicting files and then `git add` and `git commit` - Resolves conflicts during a merge.
 
 25. **Ignore and Rebase:**
-    - Create a `.gitignore` file.
+    - Create a `.gitignore` file. Add unwanted files or folders (e.g., __pycache__/, .env, *.log) to .gitignore. This is helpful password docs.
     - `git rebase <base-branch>` - Rebases the current branch onto the specified base branch.
     - `git rebase -i <base-branch>` - Interactive rebase, allowing modification of commit history.
 
@@ -117,6 +117,105 @@ Git Guidelines that I prefer to follow.
       - Follow underscore separated for cloud services as well (my preference - since underline service file whould have same name like service name to avoid confusion).
       - Descriptive names, indicating the file's purpose.
       - Exception -> README.md in parent directory, although in sub-directories it should follow lower case as readme.md like any oher files
+
+## Pythonic ENV setup:
+29. **micromamba:**
+   - ```bash
+      # Linux/macOS (bash/zsh):
+      curl micro.mamba.pm/install.sh | bash
+      
+      # Windows (PowerShell):
+      Invoke-WebRequest -Uri https://micro.mamba.pm/install.ps1 -OutFile install.ps1; .\install.ps1
+     
+   - ```bash
+      # Linux/macOS (bash/zsh):
+      curl micro.mamba.pm/install.sh | bash
+      
+      # Windows (PowerShell):
+      Invoke-WebRequest -Uri https://micro.mamba.pm/install.ps1 -OutFile install.ps1; .\install.ps1
+   - ```bash
+      # ✅ CREATE & MANAGE ENVIRONMENTS
+
+      # Create environment with Python (no pip):
+      micromamba create -n myenv python=3.11
+      
+      # Activate environment:
+      micromamba activate myenv
+      
+      # Deactivate:
+      micromamba deactivate
+   - ```bash
+      # 📦 INSTALL PACKAGES
+
+      # Install packages from conda-forge:
+      micromamba install -n myenv numpy pandas
+      
+      # Avoid pip unless absolutely necessary (prefer conda-forge packages)
+   - ```bash
+      # 📝 USING environment.yml (pip-free, recommended)
+
+      # environment.yml
+      name: myenv
+      channels:
+        - conda-forge
+      dependencies:
+        - python=3.11
+        - numpy
+        - pandas
+
+   - ```bash
+      # Create environment from environment.yml:
+      micromamba create -f environment.yml
+
+   - ```bash
+      # 📝 USING requirements.txt (fallback, pip-based)
+
+      # Create env with pip if needed:
+      micromamba create -n myenv python=3.11 pip
+      micromamba activate myenv
+      pip install -r requirements.txt
+
+     # 🚫 AVOIDING PIP WITH conda-lock (freeze envs)
+
+      # Install conda-lock (once):
+      micromamba install -n base conda-lock -c conda-forge
+      
+      # Generate lock file:
+      conda-lock lock -p linux-64 -f environment.yml
+      
+      # Create from locked file:
+      micromamba create -n myenv --file conda-lock.yml
+
+     # 🧠 SHELL INTEGRATION (bash/zsh/fish)
+
+      # Init shell:
+      micromamba shell init -s bash -p ~/micromamba
+      source ~/.bashrc  # or ~/.zshrc
+      
+      # Auto-activation in project:
+      mkdir -p ./env
+      micromamba create -y -p ./env python=3.11
+      micromamba activate ./env
+
+     # 🧹 CLEANUP & INSPECT
+
+      # List environments:
+      micromamba env list
+      
+      # Remove environment:
+      micromamba remove -n myenv --all
+      
+      # List installed packages:
+      micromamba list
+
+   - ```bash
+      # 🧩 BEST PRACTICES
+
+      - Use environment.yml + conda-lock for reproducibility
+      - Stick to conda-forge packages (avoid pip when possible)
+      - Use local envs with: micromamba create -p ./env
+      - Perfect for CI/CD, Docker, project-level isolation
+      - Faster and lighter than conda
      
 ## SSH Key Pair:
    - **Public Key:**
